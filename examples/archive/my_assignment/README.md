@@ -2,7 +2,10 @@
 
 This project contains a Python script that classifies emails as either spam or not spam using a Naive Bayes classifier.
 
-## Prohect Structure
+author: 
+group members: x, y, z
+
+## Project Structure
 
 ```bash
 ├── dat                                                                                                  │

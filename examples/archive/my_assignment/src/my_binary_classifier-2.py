@@ -1,5 +1,5 @@
 """
-Train and evaluate a binary classifier for spam detection.
+Train and evaluate a binary classifier for sentiment detection.
 
 Design
 
@@ -14,10 +14,16 @@ Design
 
 Results:
 
+[INFO] number of documents: 50000
+[INFO] number of documents after dedublication: 49582
+[INFO] instances of negative: 24698
+[INFO] instances of positive: 24884
+[[3979  930]
+ [ 950 4058]]
+[INFO] Relative Accuracy; 0.8104265402843602
+[INFO] Accuracy in instances 8037
 
-
-
-Author: Kristoffer Nielbo
+Author: Kristoffer Nielbo, John Dee and Jane Doe
 Email: kln@cas.au.dk
 
 """
@@ -63,9 +69,10 @@ class BinaryClassifier:
         data.drop_duplicates(inplace=True)
         print(f'[INFO] number of documents after dedublication: {data.shape[0]}') 
         corpus = data[xcolumn]
-        for label in set(data[ycolumn]):
+        self.classnames = list(set(data[ycolumn]))
+        for label in self.classnames:
             print(f'[INFO] instances of {label}: {sum(data[ycolumn] == label)}')
-        self.X = self.cv.fit_transform(corpus.values)#.toarray()
+        self.X = self.cv.fit_transform(corpus.values)
         self.y = data[ycolumn].values
 
     def preprocess_data(self, test_size=0.2):
@@ -90,8 +97,7 @@ class BinaryClassifier:
         y_pred = self.classifier.predict(self.X_test)
         cm = confusion_matrix(self.y_test, y_pred)
         print(cm)
-        class_names = ['Not Spam', 'Spam']
-        self.plot_confusion_matrix(cm, class_names, filename)
+        self.plot_confusion_matrix(cm, self.classnames, filename)
         print(f'[INFO] Relative Accuracy; {accuracy_score(self.y_test, y_pred)}')
         print(f'[INFO] Accuracy in instances {accuracy_score(self.y_test, y_pred, normalize=False)}')
 
