@@ -203,13 +203,13 @@ __Location__ room 114B in building [5008](https://www.au.dk/om/organisation/find
 
 #### Coding Café: Assignment 5
 
-In this coding café, we will work on [assignment 5]().
+In this coding café, we will work on [assignment 5](https://github.com/CHCAA-EDUX/Programming-for-the-Humanities-E23/blob/main/assignments/assignment_05.md).
 
 ##### Reading #####
 
 #### Assignment 5 ####
 
-* [assignment 5](): Horoscopes and Happiness classification
+* [assignment 5](https://github.com/CHCAA-EDUX/Programming-for-the-Humanities-E23/blob/main/assignments/assignment_05.md).
 
 ---
 
@@ -222,6 +222,9 @@ __Location__ room 114B in building [5008](https://www.au.dk/om/organisation/find
 
 Discussion of individual assignment
 
-##### Reading
+##### Suggested Reading
+
+* [Naive Bayes and Text Classification I](https://github.com/CHCAA-EDUX/Programming-for-the-Humanities-E23/blob/61c151c10cf2106c156a631c49fa3ec4a3c18b64/reading/Raschka-2017-Naive-Bayes-and-Text-Classification.pdf)
+* [Mining the Past – Data-Intensive Knowledge Discovery in the Study of Historical Textual Traditions](https://github.com/CHCAA-EDUX/Programming-for-the-Humanities-E23/blob/61c151c10cf2106c156a631c49fa3ec4a3c18b64/reading/Nielbo-2017-Mining-the-Pase.pdf)
 
 ---
