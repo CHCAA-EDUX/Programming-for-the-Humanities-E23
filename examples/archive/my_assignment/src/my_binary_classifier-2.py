@@ -3,7 +3,7 @@ Train and evaluate a binary classifier for spam detection.
 
 Design
 
-1. define a class BinaryEmailClassifier using a MultinomialNB classifier from scikit-learn.
+1. define a class BinaryClassifier using a MultinomialNB classifier from scikit-learn.
     - Initialize the class with parameters for the classifier.
 2. add a method load_data to load the data from the file using pd.read_csv.
 4. add a method preprocess_data to preprocess the data and split it into training and testing sets.
@@ -14,13 +14,7 @@ Design
 
 Results:
 
-[INFO] number of documents: 5728                                                                         │
-[INFO] number of documents after dedublication: 5695                                                     │
-[INFO] number of targets: 0.2402107111501317                                                             │
-[[861   9]                                                                                               │
- [  1 268]]                                                                                              │
-[INFO] Relative Accuracy; 0.9912203687445127                                                             │
-[INFO] Accuracy in instances 1129
+
 
 
 Author: Kristoffer Nielbo
@@ -45,7 +39,7 @@ def set_random_seed(seed=0):
     random.seed(seed)
 
 
-class BinaryEmailClassifier:
+class BinaryClassifier:
     """ A binary classifier for spam detection.
     
     Attributes:
@@ -124,8 +118,7 @@ def main():
     """ Instantiate the class and call the methods in order.
     """
     set_random_seed()
-    bec = BinaryEmailClassifier()
-    #bec.load_data('dat/emails.csv')
+    bec = BinaryClassifier()
     bec.load_data('dat/imdb_reviews.csv')
     bec.preprocess_data()
     bec.train()
